@@ -80,9 +80,9 @@ namespace MvcDebuggingExam.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(int productId)
+        public IActionResult Delete(int id)
         {
-            var product = products.FirstOrDefault(p => p.Id == productId);
+            var product = products.FirstOrDefault(p => p.Id == id);
             if (product != null)
             {
                 products.Remove(product);
